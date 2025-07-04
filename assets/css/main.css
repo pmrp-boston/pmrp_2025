@@ -262,13 +262,28 @@ table td {
     border-radius: 5px;
     text-align: right;
   }
+  .site-nav .nav-trigger {
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    opacity: 0;
+  }
   .site-nav label[for=nav-trigger] {
     display: block;
     float: right;
     width: 36px;
     height: 36px;
     z-index: 2;
-    cursor: pointer;
+  }
+  .site-nav .nav-trigger:focus ~ label[for=nav-trigger] {
+    outline: 2px solid rgba(153, 153, 158, 0.65);
+    outline-offset: 2px;
+    border-radius: 5px;
   }
   .site-nav .menu-icon {
     display: block;
@@ -645,5 +660,3 @@ table td {
 .highlight .il {
   color: #099;
 }
-
-/*# sourceMappingURL=main.css.map */
