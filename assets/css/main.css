@@ -445,10 +445,6 @@ table td {
   letter-spacing: -1px;
   line-height: 1;
 }
-.post-title a {
-  color: var(--color-text);
-  font-weight: var(--font-weight-normal);
-}
 @media screen and (max-width: 800px) {
   .post-title {
     font-size: 36px;
