@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #2a7ae2;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 a:visited {
   color: rgb(22.9483471074, 86.2541322314, 168.5516528926);
@@ -262,6 +262,7 @@ table td {
 .site-nav .page-link {
   color: #111;
   line-height: 1.5;
+  font-weight: 400;
 }
 .site-nav .page-link:not(:last-child) {
   margin-right: 20px;
@@ -405,14 +406,6 @@ table td {
   flex: 1;
 }
 
-.page-heading {
-  font-size: 32px;
-}
-
-.post-list-heading {
-  font-size: 28px;
-}
-
 .post-list {
   margin-left: 0;
   list-style: none;
@@ -424,11 +417,6 @@ table td {
 .post-meta {
   font-size: 14px;
   color: #828282;
-}
-
-.post-link {
-  display: block;
-  font-size: 24px;
 }
 
 /**
