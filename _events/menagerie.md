@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The Menagerie
-year: 2025
+season_id: 2025
 ---
 ## Performance
 Friday, July 18th, 2024, at 8:00pm

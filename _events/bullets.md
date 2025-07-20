@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bullets over Boston
-year: 2025
+season_id: 2025
 ---
 ## [Tickets](/tickets)
 Tickets and reservations for the both weekends' performances are available on [our Tickets page](/tickets).

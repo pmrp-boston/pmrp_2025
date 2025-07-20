@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Arisia ’24: The Doomsday Machine"
-year: 2024
+season_id: 2024
 ---
 At the 2024 Arisia science-fiction convention, the Post-Meridian Radio Players presented our gender-swapped look at the classic Star Trek episode “The Doomsday Machine”, directed and adapted by Liz Salazar from the original script by Norman Spinrad. (For information on Arisia, go to https://www.arisia.org/.)
 

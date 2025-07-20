@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="season">
+
+  <header class="post-header">
+    <h1 class="post-title">
+        <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+    </h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.season_id %}
+  {% assign season_events = site.events | where: "season_id", page.season_id %}
+  {% if season_events.size > 0 %}
+  <h2>Events</h2>
+  <ul>
+    {% for season_event in season_events %}
+    <li>
+        <a href="{{ season_event.url | relative_url }}">{{ season_event.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endif %}
+
+</article>
