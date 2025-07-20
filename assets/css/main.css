@@ -224,6 +224,19 @@ table td {
   position: relative;
 }
 
+.site-header .wip-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hotpink;
+  color: white;
+  padding: 5px;
+}
+
+.site-header .wip-banner :is(a, a:visited) {
+  color: white;
+}
+
 .site-title {
   font-size: 26px;
   font-weight: 300;
