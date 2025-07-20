@@ -267,6 +267,10 @@ table td {
   margin-right: 20px;
 }
 @media screen and (max-width: 600px) {
+  .site-header .wip-banner {
+    padding-right: 60px;
+  }
+
   .site-nav {
     position: absolute;
     top: 9px;
