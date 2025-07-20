@@ -10,7 +10,7 @@ title: Welcome to PMRP!
 ## Current {% if current_seasons.size <= 1 %}season{% else %}seasons{% endif %}
 {% if current_seasons.size > 0 %}
 {% for season in current_seasons %}
-- [{{ season.title }}]({{ season.permalink | relative_url }})
+- [{{ season.title }}]({{ season.url | relative_url }})
 {% endfor %}
 Check out our [past shows]({{ "past" | relative_url }}) as well!
 {% else %}
