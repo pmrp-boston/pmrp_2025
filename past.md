@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Past Shows
-permalink: /past
 ---
 This section lists our past performances. See our upcoming events page for events to look forward to!
 

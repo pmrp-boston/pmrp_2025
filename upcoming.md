@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Current & Upcoming
-permalink: /events/upcoming
 ---
 This page list our upcoming events. You may also want to check out our past events, some of which have audio, video, or CDs available.
 
