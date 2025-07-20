@@ -40,8 +40,10 @@ collections:
   seasons:
     output: true
 
-jekyll_admin:
-  homepage: "pages"
+header_pages:
+  - upcoming.md
+  - past.md
+  - about.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
