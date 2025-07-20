@@ -16,7 +16,7 @@ here!](https://www.zazzle.com/collections/metropolis-119378043986767251?rf=23899
 ## Bandcamp Digital Store
 
 Want to buy our stuff online? We have several of our shows available on
-Bandcamp, with much more coming! Simply visit https://pmrp.bandcamp.com/
+Bandcamp, with much more coming! Simply visit [pmrp.bandcamp.com](https://pmrp.bandcamp.com/)
 to see our full listing. As of summer 2021, we had the following shows up:
 
 * Super Sleuths! ([our page](/events/srt14) — 
