@@ -88,6 +88,26 @@ li > ol {
   margin-bottom: 0;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 15px;
+}
+
+dt {
+  font-weight: var(--font-weight-bold);
+}
+
+@media screen and (max-width: 600px) {
+  dl {
+    grid-template-columns: auto;
+  }
+
+  dd {
+    margin-bottom: 10px;
+  }
+}
+
 /**
  * Headings
  */
