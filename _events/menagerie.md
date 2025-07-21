@@ -1,5 +1,4 @@
 ---
-layout: page
 title: The Menagerie
 season_id: 2025
 ---

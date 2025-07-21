@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Arisia ’24: The Doomsday Machine"
 season_id: 2024
 ---

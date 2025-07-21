@@ -40,6 +40,22 @@ collections:
   seasons:
     output: true
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "seasons"
+    values:
+      layout: "season"
+      current: false
+  -
+    scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "page"
+      current: false
+
 header_pages:
   - upcoming.md
   - past.md

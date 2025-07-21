@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Bullets over Boston
 season_id: 2025
 current: true

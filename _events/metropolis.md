@@ -1,7 +1,6 @@
 ---
-layout: page
-season_id: 2023
 title: Metropolis
+season_id: 2023
 ---
 
 Extended online program
