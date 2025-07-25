@@ -23,7 +23,7 @@ url: https://kadauber.github.io
 baseurl: /pmrp_2025
 
 title: The Post Meridian Radio Players
-email: your-email@example.com
+email: info@pmrp.org
 description: >- # this means to ignore newlines until "twitter_username:"
   The Premier Radio Drama Troupe of Boston!
 twitter_username: jekyllrb
@@ -67,6 +67,7 @@ defaults:
       layout: "page"
 
 header_pages:
+  - tickets.md
   - upcoming.md
   - past.md
   - about.md
