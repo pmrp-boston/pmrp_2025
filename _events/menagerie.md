@@ -1,5 +1,6 @@
 ---
 title: The Menagerie
+event_id: menagerie
 season_id: 2025
 ---
 ## Performance

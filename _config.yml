@@ -39,6 +39,10 @@ collections:
     output: true
   seasons:
     output: true
+  venues:
+    output: true
+  extra_content:
+    output: false
 
 defaults:
   -
@@ -55,6 +59,12 @@ defaults:
     values:
       layout: "page"
       current: false
+  -
+    scope:
+      path: ""
+      type: "venues"
+    values:
+      layout: "page"
 
 header_pages:
   - upcoming.md

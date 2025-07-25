@@ -1,5 +1,6 @@
 ---
 title: Metropolis
+event_id: metropolis
 season_id: 2023
 ---
 

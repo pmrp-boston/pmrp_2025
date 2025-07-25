@@ -1,0 +1,10 @@
+<ul>
+    {% for performance in include.performances %}
+
+    {% assign venue = site.venues | where: "venue_id", performance.venue_id | first %}
+
+    <li>{{ performance.datetime | date: "%B %e, %Y, at %I:%M %p" }} at <a href="{{ venue.path }}">{{ venue.short_name
+            }}</a>{% if performance.is_matinee %} (matinée){% endif %}</li>
+
+    {% endfor %}
+</ul>

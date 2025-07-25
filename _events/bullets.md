@@ -1,7 +1,34 @@
 ---
 title: Bullets over Boston
+event_id: bullets
 season_id: 2025
 current: true
+performances:
+  - datetime: 2025-07-25 20:00:00 -0400
+    venue_id: 204elm
+  - datetime: 2025-07-26 14:00:00 -0400
+    venue_id: 204elm
+    is_matinee: true
+  - datetime: 2025-07-26 20:00:00 -0400
+    venue_id: 204elm
+  - datetime: 2025-08-01 20:00:00 -0400
+    venue_id: mca
+  - datetime: 2025-08-02 20:00:00 -0400
+    venue_id: mca
+tickets:
+  - weekend_title: "Weekend of July 26"
+    weekend: "the first weekend"
+    location: Somerville
+    vendor_url: https://www.brownpapertickets.com/event/6669517
+    vendor_name: Brown Paper Tickets
+    vendor_img: bpt
+    extra_content_id: bullets_tickets
+  - weekend_title: "Weekend of August 1"
+    weekend: "the second weekend"
+    location: the Mosesian Center for the Arts
+    vendor_url: https://forms.gle/yEPSuYnkqeHJUNdj7
+    vendor_name: the MCA website
+    vendor_img: mca
 ---
 ## [Tickets](/tickets)
 Tickets and reservations for the both weekends' performances are available on [our Tickets page](/tickets).
