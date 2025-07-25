@@ -7,6 +7,8 @@ title: Tickets
 {% for event in current_events %}
 
 ## [{{ event.title }}]({{ event.url | relative_url }})
+
+### Performance Schedule
 {% include performances_list.html performances=event.performances %}
 
 {% for ticket_details in event.tickets %}
