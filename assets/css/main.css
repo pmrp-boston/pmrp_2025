@@ -254,8 +254,18 @@ table td {
 .site-header {
   border-top: 5px solid var(--color-text-subtle-1);
   border-bottom: 1px solid var(--color-border);
-  min-height: 55.95px;
+  min-height: 6rem;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.site-header .wrapper {
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .wip-banner {
@@ -281,6 +291,10 @@ table td {
 }
 .site-title, .site-title:visited {
   color: var(--color-text-subtle-1);
+}
+
+.site-title .site-title-img {
+  max-height: 5rem;
 }
 
 .site-nav {
