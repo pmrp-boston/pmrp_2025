@@ -8,15 +8,25 @@
     This site is a work in progress. Visit the current site at <a href="https://pmrp.org">pmrp.org</a>.
   </div>
 
-  {%- include header.html -%}
+  <div class="site-wrapper">
+    {%- comment -%}
+    <header class="site-header" />
+    {%- endcomment -%}
+    {%- include header.html -%}
 
-  <main class="page-content" aria-label="Content">
-    <div class="content-wrapper">
-      {{ content }}
+    <div class="page-wrapper">
+      <main class="page-content" aria-label="Content">
+        <div class="content-wrapper">
+          {{ content }}
+        </div>
+      </main>
+
+      {%- comment -%}
+      <footer class="site-footer" />
+      {%- endcomment -%}
+      {%- include footer.html -%}
     </div>
-  </main>
-
-  {%- include footer.html -%}
+    </div>
 </body>
 
 </html>

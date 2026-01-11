@@ -3,9 +3,6 @@
 @import "base.css";
 
 .wip-banner {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   text-align: center;
   background-color: hotpink;
   color: white;
@@ -31,7 +28,7 @@
   height: 16px;
   display: inline-block;
   fill: var(--color-text-subtle-2);
-  padding-right: 5px;
+  margin-right: 5px;
   vertical-align: text-top;
 }
 
@@ -66,8 +63,53 @@
 }
 
 /**
+ * Site layout
+ */
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-wrapper {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  overflow: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper > .page-content {
+  flex-grow: 1;
+}
+
+/**
  * Site header
  */
+.site-header {
+  background-color: #ececec;
+  padding-block: 100px;
+  padding-left: 10px;
+  padding-right: 12px;
+  flex-shrink: 0;
+}
+
+.site-header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .site-title {
   font-size: 26px;
   font-weight: 300;
@@ -90,6 +132,12 @@
   color: var(--color-text);
   line-height: 1.5;
   font-weight: var(--font-weight-normal);
+}
+
+.links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 /**
@@ -125,47 +173,9 @@
 .footer-col-wrapper {
   font-size: 15px;
   color: var(--color-text-subtle-2);
-  margin-left: -15px;
-}
-
-.footer-col {
-  float: left;
-  margin-bottom: 15px;
-  padding-left: 15px;
-}
-
-.footer-col-1 {
-  width: -webkit-calc(35% - (30px / 2));
-  width: calc(35% - 30px / 2);
-}
-
-.footer-col-2 {
-  width: -webkit-calc(20% - (30px / 2));
-  width: calc(20% - 30px / 2);
-}
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (30px / 2));
-  width: calc(45% - 30px / 2);
-}
-
-@media screen and (max-width: 800px) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (30px / 2));
-    width: calc(50% - 30px / 2);
-  }
-  .footer-col-3 {
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - 30px / 2);
-  }
-}
-@media screen and (max-width: 600px) {
-  .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - 30px / 2);
-  }
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 /**
