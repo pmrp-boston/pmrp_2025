@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
+  <div class="wip-banner">
+    This site is a work in progress. Visit the current site at <a href="https://pmrp.org">pmrp.org</a>.
+  </div>
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+  <main class="page-content" aria-label="Content">
+    <div class="content-wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    {%- include footer.html -%}
-
-  </body>
+  {%- include footer.html -%}
+</body>
 
 </html>

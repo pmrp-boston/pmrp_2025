@@ -1,0 +1,13 @@
+:root {
+  --color-bg: #fdfdfd;
+  --color-text: #111;
+  --color-text-subtle-1: rgb(66.25, 66.25, 66.25);
+  --color-text-subtle-2: #828282;
+  --color-link: #2a7ae2;
+  --color-link-hover: #111;
+  --color-link-visited: rgb(22.9483471074, 86.2541322314, 168.5516528926);
+  --color-border: #e8e8e8;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+}
