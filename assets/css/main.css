@@ -14,12 +14,6 @@
   color: white;
 }
 
-@media screen and (max-width: 600px) {
-  .wip-banner {
-    padding-right: 60px;
-  }
-}
-
 /**
  * Icons
  */
