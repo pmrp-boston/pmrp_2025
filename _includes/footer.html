@@ -2,33 +2,15 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="content-wrapper">
+    {%- assign footer_pages = site.data.navigation.footer_pages -%}
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <ul class="footer-links-wrapper unstyled-list">
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
+      {%- include footer_links_col.html footer_pages=footer_pages.col1 -%}
+      {%- include footer_links_col.html footer_pages=footer_pages.col2 -%}
+      {%- include footer_links_col.html footer_pages=footer_pages.col3 -%}
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
-    </div>
+    </ul>
 
   </div>
 

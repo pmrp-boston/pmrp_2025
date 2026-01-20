@@ -1,14 +1,31 @@
 <header class="site-header" role="banner">
 
   <div class="site-header-wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign page_paths = site.data.navigation.header_pages -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
       <img class="site-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
     </a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
+        {%- include social.html -%}
+        <div class="links-wrapper">
+          <a class="page-link" href="http://www.zazzle.com/postmeridianradio">Shop <svg class="external-link-icon">
+            <use
+              xlink:href="{{ '/assets/ui-icons.svg#external-link' | relative_url }}"
+            ></use></svg>
+          </a>
+          <a class="page-link" href="https://pmrppodcast.buzzsprout.com">Podcast <svg class="external-link-icon">
+            <use
+              xlink:href="{{ '/assets/ui-icons.svg#external-link' | relative_url }}"
+            ></use></svg>
+          </a>
+          <a class="page-link" href="https://pmrp.bandcamp.com">Bandcamp <svg class="external-link-icon">
+            <use
+              xlink:href="{{ '/assets/ui-icons.svg#external-link' | relative_url }}"
+            ></use></svg>
+          </a>
+        </div>
         <div class="links-wrapper">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}

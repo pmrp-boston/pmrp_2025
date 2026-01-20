@@ -1,0 +1,44 @@
+<div class="footer-links-col">
+  {% for path in include.footer_pages %}
+  {%- assign my_page = site.pages | where: "path", path.page | first -%}
+  {%- if my_page.title -%}
+  <li>
+    <a class="page-link" href="{{ my_page.url | relative_url }}"
+      >{{ my_page.title | escape }}</a
+    >
+
+    {%- if path.subpages -%}
+    <ul class="footer-sublinks-wrapper unstyled-list">
+
+      {% for subpath in path.subpages %}
+      {%- assign sub_page = site.pages | where: "path", subpath | first -%}
+      {%- if sub_page.title -%}
+      <li>
+        <a class="footer-sublink" href="{{ sub_page.url | relative_url }}"
+          >{{ sub_page.title | escape }}</a
+        >
+      </li>
+      {%- endif -%}
+      {% endfor %}
+
+    </ul>
+    {%- endif -%}
+
+    {%- if my_page.path == "past.md" -%}
+    {% assign sorted_seasons = site.seasons | sort: "season_id" | reverse | slice: 0, 2 %}
+    <ul class="footer-sublinks-wrapper unstyled-list">
+
+      {% for season in sorted_seasons %}
+      <li>
+        <a class="footer-sublink" href="{{ season.url | relative_url }}"
+          >{{ season.title | escape }}</a
+        >
+      </li>
+      {% endfor %}
+
+    </ul>
+    {%- endif -%}
+  </li>
+  {%- endif -%}
+  {% endfor %}
+</div>
