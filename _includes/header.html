@@ -2,9 +2,19 @@
 
   <div class="site-header-wrapper">
     {%- assign page_paths = site.data.navigation.header_pages -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      <img class="site-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
-    </a>
+    
+    <div class="site-header-left-wrapper">
+      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+        <img class="site-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
+      </a>
+
+      {%- if site.data.navigation.tickets_page -%}
+      {%- assign tickets_page = site.pages | where: "path", site.data.navigation.tickets_page | first -%}
+      <a href="{{ tickets_page.url | relative_url }}" class="tickets-header-link">
+        Get Tickets
+      </a>
+      {%- endif -%}
+    </div>
 
     {%- if page_paths -%}
       <nav class="site-nav">

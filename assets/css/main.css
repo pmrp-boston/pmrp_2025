@@ -97,6 +97,32 @@ button.icon-button {
   align-items: center;
 }
 
+.site-header-left-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.tickets-header-link {
+  background-color: red;
+  font-size: 1.1rem;
+  color: white !important;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .tickets-header-link {
+    font-size: 0.9rem;
+  }
+}
+
+.tickets-header-link:hover {
+  background-color: hsl(0, 100%, 40%);
+  text-decoration: none;
+}
+
 .site-title {
   font-size: 26px;
   font-weight: 300;

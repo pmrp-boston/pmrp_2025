@@ -1,8 +1,6 @@
-tickets_page:
-  - tickets.md
+tickets_page: tickets.md
 
-auditions_page:
-  - auditions.md
+auditions_page: auditions.md
 
 header_pages:
   - upcoming.md
