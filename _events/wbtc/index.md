@@ -119,8 +119,3 @@ Production Assistant
 
 House Manager (Somerville)
 : Sally Lahoud
-
--------------------
-
-## [Tickets]({{ "events/wbtc/tickets" | relative_url }})
-Tickets for this show are no longer available, but you can still see the [tickets page]({{ "events/wbtc/tickets" | relative_url }}).
