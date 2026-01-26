@@ -2,27 +2,21 @@
 title: War of the Worlds and Other Invasions
 event_id: invasions
 season_id: 2025
-current: false
+current: true
 performances:
-  dates:
-    - datetime: 2025-10-23 20:00:00 -0400
-      venue_id: 204elm
-    - datetime: 2025-10-24 20:00:00 -0400
-      venue_id: 204elm
-    - datetime: 2025-10-25 20:00:00 -0400
-      venue_id: 204elm
-    - datetime: 2025-10-31 19:30:00 -0400
-      venue_id: mca
-    - datetime: 2025-11-01 14:00:00 -0400
-      venue_id: mca
-      is_matinee: true
-    - datetime: 2025-11-01 19:30:00 -0400
-      venue_id: mca
-locations:
-  - venue_id: 204elm
-    info: Auditions, rehearsals, and the first weekend’s performances
-  - venue_id: mca
-    info: The second weekend’s performances
+  - datetime: 2025-10-23 20:00:00 -0400
+    venue_id: 204elm
+  - datetime: 2025-10-24 20:00:00 -0400
+    venue_id: 204elm
+  - datetime: 2025-10-25 20:00:00 -0400
+    venue_id: 204elm
+  - datetime: 2025-10-31 19:30:00 -0400
+    venue_id: mca
+  - datetime: 2025-11-01 14:00:00 -0400
+    venue_id: mca
+    is_matinee: true
+  - datetime: 2025-11-01 19:30:00 -0400
+    venue_id: mca
 tickets:
   - weekend_title: "Weekend of July 26"
     weekend: "the first weekend"
@@ -40,7 +34,7 @@ tickets:
     closed_datetime: 2025-11-01 19:30:00 -0400
 ---
 
-## Program and bios
+<span class='headphrase'>Program and bios:</span>
 <p>
 <a href='bios.html'>Cast and crew biographies (and some other links)</a>
 </p>

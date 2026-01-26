@@ -1,29 +1,9 @@
 <ul>
-    {% for performance in include.performances.dates %}
+    {% for performance in include.performances %}
 
     {% assign venue = site.venues | where: "venue_id", performance.venue_id | first %}
 
-    {% capture date_description %}
-    {% if performance.datetime %}
-        {{ performance.datetime | date: "%B %e, %Y, at %I:%M %p" }}
-    {% else %}
-        {{ performance.date_info }}
-    {% endif %}
-    {% endcapture %}
-
-    {% capture venue_link %}
-    <a href="{{ venue.url | relative_url }}">{{ venue.short_name }}</a>
-    {% endcapture %}
-
-    {% capture matinee %}
-    {% if performance.is_matinee %} (matinée){% endif %}
-    {% endcapture %}
-
-    <li>
-        {{ date_description }} at {{ venue_link }}{{ matinee }}
-    </li>
+    <li>{{ performance.datetime | date: "%A, %B %-d, %Y, at %-l:%M%P" }} at <a href="{{ venue.url | relative_url }}">{{ venue.short_name }}</a>{% if performance.is_matinee %} (matinée){% endif %}</li>
 
     {% endfor %}
 </ul>
-
-{{ include.performances.info | markdownify }}

@@ -1,45 +1,22 @@
-{% assign found_tickets = false %}
+You can buy tickets for <strong>{{ include.ticket_details.weekend }}</strong> in <strong>{{
+    include.ticket_details.location }}</strong> online through <a href="{{ include.ticket_details.vendor_url }}">{{
+    include.ticket_details.vendor_name }}</a>.
 
-{% for ticket_details in include.tickets %}
-
-{%- if site.time < ticket_details.closed_datetime -%}
-{% assign found_tickets = true %}
-
-<h3>{{ ticket_details.weekend_title }}</h3>
-
-<p>
-You can buy tickets for <strong>{{ ticket_details.weekend }}</strong> in <strong>{{
-    ticket_details.location }}</strong> online through <a href="{{ ticket_details.vendor_url }}">{{
-    ticket_details.vendor_name }}</a>.
-</p>
-
-{% if ticket_details.vendor_img == "bpt" %}
-<p>
-<a href="{{ ticket_details.vendor_url }}">
-    <img src="{{ 'assets/img/BPT_buy_tickets_large.png' | relative_url }}" alt="Tickets available now from Brown Paper Tickets" />
+{% if include.ticket_details.vendor_img == "bpt" %}
+<a href="{{ include.ticket_details.vendor_url }}">
+    <img src="assets/img/BPT_buy_tickets_large.png" alt="Tickets available now from Brown Paper Tickets" />
 </a>
-</p>
 {% endif %}
 
-{% if ticket_details.vendor_img == "mca" %}
-<p>
-<a href="{{ ticket_details.vendor_url }}">
-    <img src="{{ 'assets/img/mosesian-center-for-the-arts-buy-tickets.png' | relative_url }}"
+{% if include.ticket_details.vendor_img == "mca" %}
+<a href="{{ include.ticket_details.vendor_url }}">
+    <img src="assets/img/mosesian-center-for-the-arts-buy-tickets.png"
         alt="Tickets available now from the Dorothy and Charles Mosesian Center for the Arts" />
 </a>
-</p>
 {% endif %}
 
-{% if ticket_details.extra_content_id %}
-{% for extra_content in site.extra_content | where: "extra_content_id", ticket_details.extra_content_id %}
-{{ extra_content | markdownify }}
+{% if include.ticket_details.extra_content_id %}
+{% for extra_content in site.extra_content | where: "extra_content_id", include.ticket_details.extra_content_id %}
+{{ extra_content }}
 {% endfor %}
-{% endif %}
-
-{%- endif -%}
-
-{% endfor %}
-
-{% if found_tickets == false %}
-<p>There are no tickets currently available for this event.</p>
 {% endif %}
