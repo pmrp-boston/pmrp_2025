@@ -15,14 +15,14 @@ title: Tickets
 ### Performances
 {% include performances_list.html performances=event.performances %}
 
-{% for ticket_details in include.tickets %}
+{% for ticket_details in event.tickets %}
+
 {% if site.time < ticket_details.closed_datetime and ticket_details.vendor_url %}
 {% assign event_has_tickets = true %}
 
 ### {{ ticket_details.weekend_title }}
 
-You can buy tickets for **{{ ticket_details.weekend }}** in **{{
-    ticket_details.location }}** online through [{{ ticket_details.vendor_name }}]({{ ticket_details.vendor_url | relative_url }}).
+You can buy tickets for **{{ ticket_details.weekend }}** in **{{ ticket_details.location }}** online through [{{ ticket_details.vendor_name }}]({{ ticket_details.vendor_url | relative_url }}).
 
 {% if ticket_details.vendor_img == "bpt" %}
 <a href="{{ ticket_details.vendor_url }}">

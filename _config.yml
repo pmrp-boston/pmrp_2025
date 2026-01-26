@@ -40,8 +40,6 @@ collections:
     output: true
   venues:
     output: true
-  extra_content:
-    output: false
 
 defaults:
   - scope:
