@@ -235,3 +235,9 @@ button {
 button:hover {
   background-color: color-mix(in hsl, var(--color-bg) 80%, black);
 }
+
+/* Paragraph tags keep creeping into list items, where we
+never want them to look like paragraphs. */
+li > p:only-child {
+  display: contents;
+}
