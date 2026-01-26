@@ -1,0 +1,66 @@
+---
+layout: page
+---
+
+{% assign auditions_upcoming = false %}
+{% for audition_date in page.auditions.dates %}
+{% assign cmp_date = audition_date | date:"%s" | plus: 0 %}
+{% assign cmp_now = site.time | date:"%s" | plus: 0 %}
+{% if cmp_now < cmp_date %}
+{% assign auditions_upcoming = true %}
+{% endif %}
+{% endfor %}
+
+{% if auditions_upcoming %}
+<h2><a href="{{ 'auditions' | relative_url }}">Auditions</a></h2>
+
+{% if page.auditions.dates %}
+
+<p>Auditions will be held on:</p>
+<ul>
+    {% for audition_date in page.auditions.dates %}
+    <li>{{ audition_date | date: "%B %e, %Y" }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{{ page.auditions.info | markdownify }}
+
+<p>See our <a href="{{ 'auditions' | relative_url }}">Auditions</a> page to learn how you can be a part of this show!</p>
+
+{% endif %}
+
+{% assign tickets_available = false %}
+{% for ticket_details in page.tickets %}
+{% if site.time < ticket_details.closed_datetime %}
+{% assign tickets_available = true %}
+{% endif %}
+{% endfor %}
+
+{%- if tickets_available -%}
+
+<a href="{{ '/tickets' | relative_url }}">Tickets are available now!</a>
+
+{%- endif -%}
+
+{%- if page.performances -%}
+<h2>Performances</h2>
+
+{% include performances_list.html performances=page.performances %}
+
+{%- endif -%}
+
+{% if page.locations %}
+<h2>Locations</h2>
+<ul>
+  {% for location in page.locations %} 
+  {% assign venue = site.venues | where: "venue_id", location.venue_id | first %}
+  <li>
+    <a href="{{ venue.url | relative_url }}">{{ venue.title }}</a>: {{ location.info }}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+
+{{ content }}
