@@ -2,19 +2,20 @@
 title: Bullets over Boston
 event_id: bullets
 season_id: 2025
-current: true
+closed_datetime: 2025-08-02 20:00:00 -0400
 performances:
-  - datetime: 2025-07-25 20:00:00 -0400
-    venue_id: 204elm
-  - datetime: 2025-07-26 14:00:00 -0400
-    venue_id: 204elm
-    is_matinee: true
-  - datetime: 2025-07-26 20:00:00 -0400
-    venue_id: 204elm
-  - datetime: 2025-08-01 20:00:00 -0400
-    venue_id: mca
-  - datetime: 2025-08-02 20:00:00 -0400
-    venue_id: mca
+  dates:
+    - datetime: 2025-07-25 20:00:00 -0400
+      venue_id: 204elm
+    - datetime: 2025-07-26 14:00:00 -0400
+      venue_id: 204elm
+      is_matinee: true
+    - datetime: 2025-07-26 20:00:00 -0400
+      venue_id: 204elm
+    - datetime: 2025-08-01 20:00:00 -0400
+      venue_id: mca
+    - datetime: 2025-08-02 20:00:00 -0400
+      venue_id: mca
 tickets:
   - weekend_title: "Weekend of July 26"
     weekend: "the first weekend"
@@ -30,15 +31,6 @@ tickets:
     vendor_name: the MCA website
     vendor_img: mca
 ---
-## [Tickets](/tickets)
-Tickets and reservations for the both weekends' performances are available on [our Tickets page](/tickets).
-
-### Performances
-- Friday, July 25, 2025, at 8:00pm at 204 Elm St., Davis Square
-- Saturday, July 26, 2025, at 2:00pm at 204 Elm St., Davis Square (matinée)
-- Saturday, July 26, 2025, at 8:00pm at 204 Elm St., Davis Square
-- Friday, August 1, 2025, at 8:00pm at Mosesian Center for the Arts, Watertown
-- Saturday, August 2, 2025, at 8:00pm at Mosesian Center for the Arts, Watertown
 
 The PMRP Summer Mysteries return with two Dashiell Hammett radio classics!
 

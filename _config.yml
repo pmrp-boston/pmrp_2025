@@ -49,13 +49,11 @@ defaults:
       type: "seasons"
     values:
       layout: "season"
-      current: false
   - scope:
       path: ""
       type: "events"
     values:
-      layout: "page"
-      current: false
+      layout: "event"
   - scope:
       path: ""
       type: "venues"

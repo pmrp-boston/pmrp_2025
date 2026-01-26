@@ -1,30 +1,42 @@
 ---
-layout: default
+layout: page
 ---
-<article class="season">
+{{ content }}
 
-  <header class="post-header">
-    <h1 class="post-title">
-        <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-    </h1>
-  </header>
+{% assign season_events = site.events | where: "season_id", page.season_id %}
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+{% assign has_upcoming_events = false %}
+{% assign has_past_events = false %}
+{% for event in season_events %}
+{% if site.time < event.closed_datetime %}
+{% assign has_upcoming_events = true %}
+{% else %}
+{% assign has_past_events = true %}
+{% endif %}
+{% endfor %}
 
-  {% if page.season_id %}
-  {% assign season_events = site.events | where: "season_id", page.season_id %}
-  {% if season_events.size > 0 %}
-  <h2>Events</h2>
-  <ul>
-    {% for season_event in season_events %}
-    <li>
-        <a href="{{ season_event.url | relative_url }}">{{ season_event.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
+{% if has_upcoming_events %}
+<h2>Upcoming Events</h2>
+<ul>
+  {% for season_event in season_events %}
+  {% if site.time < season_event.closed_datetime %}
+  <li>
+      <a href="{{ season_event.url | relative_url }}">{{ season_event.title }}</a>
+  </li>
   {% endif %}
-  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}
 
-</article>
+{% if has_past_events %}
+<h2>{% if has_upcoming_events %}Past Events{% else %}Events{% endif %}</h2>
+<ul>
+  {% for season_event in season_events %}
+  {% if site.time > season_event.closed_datetime or season_event.closed_datetime == nil %}
+  <li>
+      <a href="{{ season_event.url | relative_url }}">{{ season_event.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

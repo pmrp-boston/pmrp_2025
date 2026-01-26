@@ -3,6 +3,30 @@ layout: default
 ---
 <article class="post">
 
+  {% comment %}
+  Currently running events get:   Current & Upcoming > Season
+  Past events get:                Past Shows > Season
+  Currently running seasons get:  Current & Upcoming
+  Past seasons get:               Past Shows
+  {% endcomment %}
+
+  {% if page.collection == "events" or page.collection == "seasons" %}
+  {% assign season = site.seasons | where: "season_id", page.season_id | first %}
+  
+  <nav>
+    <ol class="unstyled-list">
+      {% if site.time < page.closed_datetime %}
+      <li><a href="{{ 'upcoming' | relative_url }}">Current & Upcoming</a></li>
+      {% else %}
+      <li><a href="{{ 'past' | relative_url }}">Past Shows</a></li>
+      {% endif %}
+      {% if page.event_id %}
+      <li><a href="{{ season.url | relative_url }}">{{ season.title }}</a></li>
+      {% endif %}
+    </ol>
+  </nav>
+  {% endif %}
+
   <header class="post-header">
     <h1 class="post-title"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h1>
   </header>
