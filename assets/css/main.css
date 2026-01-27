@@ -4,7 +4,7 @@
 
 .wip-banner {
   text-align: center;
-  background-color: red;
+  background-color: var(--color-primary);
   color: white;
   padding: 5px;
   border-bottom: 4px solid black;
@@ -64,7 +64,7 @@ button.icon-button {
   padding-right: 30px;
   padding-left: 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .content-wrapper {
     max-width: -webkit-calc(800px - (30px));
     max-width: calc(800px - (30px));
@@ -103,24 +103,58 @@ button.icon-button {
   gap: 20px;
 }
 
-.tickets-header-link {
-  background-color: red;
+.site-header-hero-links-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header-hero-link {
   font-size: 1.1rem;
-  color: white !important;
   padding: 8px 12px;
   border-radius: 8px;
   text-decoration: none;
+  color: white !important;
+  text-align: center;
 }
 
-@media screen and (max-width: 600px) {
-  .tickets-header-link {
+.site-header-hero-link:not(:only-child) {
+  padding-block: 4px;
+}
+
+.site-header-hero-link:first-child:not(:only-child) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.site-header-hero-link:last-child:not(:only-child) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.site-header-hero-link:hover {
+  text-decoration: none;
+}
+
+.tickets.site-header-hero-link {
+  background-color: var(--color-primary);
+}
+
+.tickets.site-header-hero-link:hover {
+  background-color: color-mix(in oklab, var(--color-primary), black 10%);
+}
+
+.auditions.site-header-hero-link {
+  background-color: var(--color-text);
+}
+
+.auditions.site-header-hero-link:hover {
+  background-color: color-mix(in oklab, var(--color-text), white 25%);
+}
+
+@media screen and (max-width: 850px) {
+  .site-header-hero-link {
     font-size: 0.9rem;
   }
-}
-
-.tickets-header-link:hover {
-  background-color: hsl(0, 100%, 40%);
-  text-decoration: none;
 }
 
 .site-title {
@@ -128,6 +162,7 @@ button.icon-button {
   font-weight: 300;
   line-height: 54px;
   letter-spacing: -1px;
+  flex-shrink: 0;
 }
 .site-title,
 .site-title:visited {
@@ -138,7 +173,7 @@ button.icon-button {
   height: 5rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .site-title .site-title-img {
     height: 3.5rem;
   }
@@ -151,7 +186,7 @@ button.icon-button {
   gap: 5px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .site-nav {
     display: none;
   }
@@ -176,7 +211,7 @@ button.icon-button {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .mobile-nav {
     display: contents;
   }
@@ -252,7 +287,7 @@ button.icon-button {
   width: 30%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .footer-links-col {
     width: 100%;
   }
@@ -313,7 +348,7 @@ button.icon-button {
   letter-spacing: -1px;
   line-height: 1;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .post-title {
     font-size: 36px;
   }
@@ -325,7 +360,7 @@ button.icon-button {
 .post-content h2 {
   font-size: 32px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .post-content h2 {
     font-size: 28px;
   }
@@ -333,7 +368,7 @@ button.icon-button {
 .post-content h3 {
   font-size: 26px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .post-content h3 {
     font-size: 22px;
   }
@@ -341,8 +376,19 @@ button.icon-button {
 .post-content h4 {
   font-size: 20px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   .post-content h4 {
     font-size: 18px;
   }
+}
+
+aside.callout {
+  background-color: var(--color-bg-primary);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+aside.callout > :last-child {
+  margin-bottom: 0;
 }

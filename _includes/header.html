@@ -1,3 +1,19 @@
+{% assign tickets_available = false %}
+{% assign auditions_available = false %}
+{% for event in site.events %}
+
+{% for ticket_details in event.tickets %}
+{% if site.time < ticket_details.closed_datetime and ticket_details.vendor_url %}
+{% assign tickets_available = true %}
+{% endif %}
+{% endfor %}
+
+{% if site.time < event.auditions.closed_datetime %}
+{% assign auditions_available = true %}
+{% endif %}
+
+{% endfor %}
+
 <header class="site-header" role="banner">
 
   <div class="site-header-wrapper">
@@ -8,12 +24,20 @@
         <img class="site-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
       </a>
 
-      {%- if site.data.navigation.tickets_page -%}
-      {%- assign tickets_page = site.pages | where: "path", site.data.navigation.tickets_page | first -%}
-      <a href="{{ tickets_page.url | relative_url }}" class="tickets-header-link">
-        Get Tickets
-      </a>
-      {%- endif -%}
+      <div class="site-header-hero-links-wrapper">
+        {% if site.data.navigation.tickets_page and tickets_available %}
+        {% assign tickets_page = site.pages | where: "path", site.data.navigation.tickets_page | first %}
+        {% endif %}
+        <a href="{{ tickets_page.url | relative_url }}" class="tickets site-header-hero-link">
+          Get Tickets
+        </a>
+        {% if site.data.navigation.auditions_page and auditions_available %}
+        {% assign auditions = site.pages | where: "path", site.data.navigation.auditions_page | first %}
+        <a href="{{ auditions.url | relative_url }}" class="auditions site-header-hero-link">
+          Audition Now
+        </a>
+        {% endif %}
+      </div>
     </div>
 
     {%- if page_paths -%}

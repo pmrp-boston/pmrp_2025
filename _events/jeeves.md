@@ -9,6 +9,13 @@ auditions:
     - 2026-04-17
   info: Callbacks, if needed, will be individually scheduled over Zoom.
   closed_datetime: 2026-04-15 23:00:00 -0400
+  venue_id: 204elm
+  docs_link: https://drive.google.com/drive/folders/1lR5so-QFMaFQqJ_A9V0VfuVxF-n2L8rn?usp=drive_link
+  signup_form_link: https://forms.gle/VvMoR7HqfAYDHurs8
+  special_instructions: |
+    For this show, we are looking for *three different pairs of actors* (one set gender-swapped) to play Jeeves and Wooster! The three segments will each have their own Jeeves and Wooster.
+    
+    "Right Ho, Jeeves" is **gender-swapped** from the original story, with a female Jeeves attending to Betty Wooster.
 performances:
   dates:
     - date_info: The weekend of April 16th
