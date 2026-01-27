@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Join
+title: Get Involved
 ---
 
 ## Calendar of Events
@@ -30,4 +30,4 @@ For general inquiries, you can send email to:
 **POST-MERIDIAN RADIO PLAYERS**  
 [info@pmrp.org](mailto:info@pmrp.org)
 
-For questions about this web site itself, see [About This Site]{{ 'about/site' | relative_link }}, and for questions about auditions see [Auditions]({{ 'auditions' | relative_link }}) (the address is in the "How to Audition" section). If you like our work and want to support radio drama in the 21st century, you can make a tax-deductable contribution using the "Like what we do?" box at left or on [our donation page]({{ 'donate' | relative_link }}).
+For questions about this web site itself, see [About This Site]({{ 'about/site' | relative_link }}), and for questions about auditions see [Auditions]({{ 'auditions' | relative_link }}) (the address is in the "How to Audition" section). If you like our work and want to support radio drama in the 21st century, you can make a tax-deductable contribution using the "Like what we do?" box at left or on [our donation page]({{ 'donate' | relative_link }}).
