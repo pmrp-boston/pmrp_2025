@@ -27,10 +27,10 @@
       <div class="site-header-hero-links-wrapper">
         {% if site.data.navigation.tickets_page and tickets_available %}
         {% assign tickets_page = site.pages | where: "path", site.data.navigation.tickets_page | first %}
-        {% endif %}
         <a href="{{ tickets_page.url | relative_url }}" class="tickets site-header-hero-link">
           Get Tickets
         </a>
+        {% endif %}
         {% if site.data.navigation.auditions_page and auditions_available %}
         {% assign auditions = site.pages | where: "path", site.data.navigation.auditions_page | first %}
         <a href="{{ auditions.url | relative_url }}" class="auditions site-header-hero-link">
