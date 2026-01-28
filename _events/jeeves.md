@@ -31,7 +31,7 @@ locations:
     info: The second weekend’s performances
 ---
 
-Our Spring 2026 show will present original radio-drama adaptations of three P. G. Wodehouse stories featuring his iconic characters Bertie Wooster, a wealthy and idle English gentleman, and his valet (and frequent saviour) Jeeves.
+Our [Spring 2026]({{ 'seasons/2026' | relative_url }}) show will present original radio-drama adaptations of three P. G. Wodehouse stories featuring his iconic characters Bertie Wooster, a wealthy and idle English gentleman, and his valet (and frequent saviour) Jeeves.
 
 These three plays will be presented on stage in the style of old-time radio with actors at microphones and sound effects performed live by our talented Foley artists!
 
