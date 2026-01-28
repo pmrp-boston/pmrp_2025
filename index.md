@@ -5,7 +5,7 @@ layout: home
 {% assign num_upcoming_events = 0 %}
 {% for event in site.events %}
 {% if site.time < event.closed_datetime %}
-{% assign num_upcoming_events = num_upcomin_events | plus: 1 %}
+{% assign num_upcoming_events = num_upcoming_events | plus: 1 %}
 {% endif %}
 {% endfor %}
 
