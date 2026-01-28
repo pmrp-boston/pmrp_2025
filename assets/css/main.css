@@ -65,13 +65,13 @@ button.icon-button {
 
 .responsive-xscroll-outer-wrapper {
   overflow-x: auto;
-  margin-inline: -15px;
-  margin-bottom: 15px;
+  margin-inline: calc(-1 * var(--space-outer-gutter));
+  margin-bottom: calc(var(--space-vertical-rhythm) * 2);
   display: flex;
 }
 
 .responsive-xscroll-wrapper {
-  padding-inline: 15px;
+  padding-inline: var(--space-outer-gutter);
   flex-grow: 1;
 }
 
@@ -83,19 +83,19 @@ button.icon-button {
  * Content Wrapper
  */
 .content-wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - 30px * 2);
+  max-width: -webkit-calc(800px - var(--space-outer-gutter) * 4);
+  max-width: calc(800px - var(--space-outer-gutter) * 4);
   margin-right: auto;
   margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: calc(var(--space-outer-gutter) * 2);
+  padding-left: calc(var(--space-outer-gutter) * 2);
 }
 @media screen and (max-width: 850px) {
   .content-wrapper {
-    max-width: -webkit-calc(800px - (30px));
-    max-width: calc(800px - (30px));
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: -webkit-calc(800px - var(--space-outer-gutter) * 2);
+    max-width: calc(800px - var(--space-outer-gutter) * 2);
+    padding-right: var(--space-outer-gutter);
+    padding-left: var(--space-outer-gutter);
   }
 }
 
@@ -378,7 +378,7 @@ button.menu-button-dropdown {
 }
 
 .footer-sublinks-wrapper a {
-    font-weight: revert;
+  font-weight: revert;
 }
 
 .social-media a:hover {
@@ -399,7 +399,7 @@ button.menu-button-dropdown {
  * Page content
  */
 .page-content {
-  padding: 30px 0;
+  padding: calc(2 * var(--space-vertical-rhythm)) 0;
   flex: 1;
 }
 
@@ -407,8 +407,9 @@ button.menu-button-dropdown {
   margin-left: 0;
   list-style: none;
 }
+
 .post-list > li {
-  margin-bottom: 30px;
+  margin-bottom: calc(2 * var(--space-vertical-rhythm));
 }
 
 .post-meta {
@@ -420,7 +421,7 @@ button.menu-button-dropdown {
  * Posts
  */
 .post-header {
-  margin-bottom: 30px;
+  margin-bottom: calc(2 * var(--space-vertical-rhythm));;
 }
 
 .post-title {
@@ -435,7 +436,7 @@ button.menu-button-dropdown {
 }
 
 .post-content {
-  margin-bottom: 30px;
+  margin-bottom: calc(2 * var(--space-vertical-rhythm));;
 }
 .post-content h2 {
   font-size: 32px;
@@ -466,7 +467,7 @@ aside.callout {
   background-color: var(--color-bg-primary);
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: var(--space-vertical-rhythm);
 }
 
 aside.callout > :last-child {

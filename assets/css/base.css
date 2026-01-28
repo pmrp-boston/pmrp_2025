@@ -59,7 +59,7 @@ ol,
 dl,
 form,
 figure {
-  margin-bottom: 15px;
+  margin-bottom: var(--space-vertical-rhythm);
 }
 
 /**
@@ -131,7 +131,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--font-weight-normal);
+  font-family: 'Verdana', sans-serif;
+  font-weight: bold;
 }
 
 /**
@@ -198,7 +199,7 @@ pre > code {
  * Tables
  */
 table {
-  margin-bottom: 30px;
+  margin-bottom: calc(var(--space-vertical-rhythm) * 2);
   width: 100%;
   text-align: left;
   color: rgb(62.9, 62.9, 62.9);

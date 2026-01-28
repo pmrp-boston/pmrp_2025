@@ -13,4 +13,7 @@
 
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+
+  --space-vertical-rhythm: 20px;
+  --space-outer-gutter: 15px;  
 }
