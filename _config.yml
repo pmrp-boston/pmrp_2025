@@ -28,6 +28,7 @@ email: info@pmrp.org
 description: >- # this means to ignore newlines until next YAML field
   The Premier Radio Drama Troupe of Boston!
 show_wip_banner: true
+show_excerpts: true
 
 # Build settings
 plugins:
