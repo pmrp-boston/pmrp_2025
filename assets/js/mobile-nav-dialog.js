@@ -14,7 +14,7 @@ closeButton.addEventListener("click", () => {
 
 // Close the dialog if the window is resized to not need the mobile nav
 addEventListener("resize", () => {
-  if (window.innerWidth >= 800 && dialog.open) {
+  if (window.innerWidth >= 850 && dialog.open) {
     dialog.close();
   }
 });
