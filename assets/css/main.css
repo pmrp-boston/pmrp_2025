@@ -6,12 +6,22 @@
   text-align: center;
   background-color: var(--color-primary);
   color: white;
-  padding: 5px;
   border-bottom: 4px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: calc(1rlh + 20px);
+  top: 0;
+  width: 100%;
 }
 
 .wip-banner :is(a, a:visited) {
   color: white;
+}
+
+.wip-banner + .site-wrapper {
+  padding-top: calc(1rlh + 20px);
 }
 
 .library-patron {

@@ -4,9 +4,11 @@
 {%- include head.html -%}
 
 <body>
+  {% if site.show_wip_banner %}
   <div class="wip-banner">
-    This site is a work in progress. Visit the current site at <a href="https://pmrp.org">pmrp.org</a>.
+    <span>This site is a work in progress. Visit the current site at <a href="https://pmrp.org">pmrp.org</a>.</span>
   </div>
+  {% endif %}
 
   <div class="site-wrapper">
     {%- comment -%}
