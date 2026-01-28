@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PMRP Presents
+title: Projects
 ---
 In addition to our live shows The Post-Meridian Radio Players also produces content in the studio.  This program, called PMRP Presents! Is proud to present a large range of audio drama for your listening pleasure.
 <h2>In Production</h2>
