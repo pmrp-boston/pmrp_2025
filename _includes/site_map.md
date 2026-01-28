@@ -4,6 +4,8 @@
 
 {% assign sorted_pages = site.pages | sort: "path" %}
 
+<div class="responsive-table-scroll-wrapper">
+<div class="responsive-table-wrapper">
 <table>
 <thead>
 <th>Title</th>
@@ -20,11 +22,15 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+</div>
 
 <h3>Seasons</h3>
 
 {% assign sorted_seasons = site.seasons | sort: "season_id" %}
 
+<div class="responsive-table-scroll-wrapper">
+<div class="responsive-table-wrapper">
 <table>
 <thead>
 <th>Title</th>
@@ -41,11 +47,15 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+</div>
 
 <h3>Events</h3>
 
 {% assign sorted_events = site.events | sort: "season_id" | reverse %}
 
+<div class="responsive-table-scroll-wrapper">
+<div class="responsive-table-wrapper">
 <table>
 <thead>
 <th>Title</th>
@@ -64,10 +74,14 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+</div>
 
 <h3>Venues</h3>
 {% assign sorted_venues = site.venues | sort: "path" %}
 
+<div class="responsive-table-scroll-wrapper">
+<div class="responsive-table-wrapper">
 <table>
 <thead>
 <th>Title</th>
@@ -84,10 +98,14 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+</div>
 
 <h3>Posts</h3>
 {% assign sorted_posts = site.posts | sort: "path" %}
 
+<div class="responsive-table-scroll-wrapper">
+<div class="responsive-table-wrapper">
 <table>
 <thead>
 <th>Title</th>
@@ -104,4 +122,6 @@
 {% endfor %}
 </tbody>
 </table>
+</div>
+</div>
 

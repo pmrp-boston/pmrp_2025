@@ -59,6 +59,26 @@ button.icon-button {
 }
 
 /**
+ * Responsive table
+ */
+
+.responsive-table-scroll-wrapper {
+  overflow-x: auto;
+  margin-inline: -15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.responsive-table-wrapper {
+  padding-inline: 15px;
+  flex-grow: 1;
+}
+
+.responsive-table-scroll-wrapper table {
+  margin-bottom: 0;
+}
+
+/**
  * Content Wrapper
  */
 .content-wrapper {
