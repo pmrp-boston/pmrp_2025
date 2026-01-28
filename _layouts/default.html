@@ -29,23 +29,45 @@
   </div>
 
   <dialog class="mobile-nav-dialog" id="mobileNavDialog">
-    <div class="mobile-nav-dialog-header">
-      <img class="mobile-nav-dialog-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
-      <button class="mobile-nav-dialog-close-button icon-button" id="closeMobileNavDialogButton">
-        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
-          <title>Close navigation</title>
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-    <div class="mobile-links-wrapper">
-      {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-        <a class="mobile-page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {%- endif -%}
-      {%- endfor -%}
+    <div class="mobile-nav-dialog-contents">
+      <div class="mobile-nav-dialog-header">
+        <img class="mobile-nav-dialog-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
+        <button class="mobile-nav-dialog-close-button icon-button" id="closeMobileNavDialogButton">
+          <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+            <title>Close navigation</title>
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      {% include social.html %}
+
+      {% include nav_external_links.html %}
+      
+      <ul class="mobile-links-wrapper unstyled-list">
+        {% for item in page_paths %}
+          <li>
+          {% assign my_page = site.pages | where: "path", item.page | first %}
+          {% if item.page %}
+          <a class="mobile-page-link" href="{{ my_page.url | relative_url }}"><strong>{{ my_page.title | escape }}</strong></a>
+          {% endif %}
+          {% if item.label and item.page == nil %}
+          <strong>{{ item.label }}</strong>
+          {% endif %}
+          {% if item.subpages %}
+          <ul class="unstyled-list">
+            {% for subpage in item.subpages %}
+            {% assign my_subpage = site.pages | where: "path", subpage | first %}
+            <li>
+              <a class="mobile-page-link" href="{{ my_subpage.url | relative_url }}">{{ my_subpage.title | escape }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   </dialog>
 </body>

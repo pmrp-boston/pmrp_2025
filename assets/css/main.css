@@ -209,6 +209,45 @@ button.icon-button {
   align-items: flex-start;
 }
 
+.links-item {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+[aria-expanded=false] + .links-submenu {
+  display: none;
+}
+
+.links-submenu {
+  position: absolute;
+  background-color: var(--color-bg-primary);
+  top: 1.2lh;
+  padding: 12px;
+  width: calc(100% + 24px);
+  margin-left: -12px;
+  border: 1px solid var(--color-text-subtle-1);
+  border-radius: 12px;
+}
+
+button.menu-button-dropdown {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 20%;
+  padding: 0;
+}
+
+.menu-button-caret-icon {
+  --icon-side: 1lh;
+  width: var(--icon-side);
+  height: var(--icon-side);
+}
+
 /**
  * Mobile nav
  */
@@ -247,10 +286,18 @@ button.icon-button {
   padding: 20px;
 }
 
+.mobile-nav-dialog .mobile-nav-dialog-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 .mobile-nav-dialog .mobile-nav-dialog-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .mobile-nav-dialog .mobile-nav-dialog-title-img {
@@ -262,7 +309,8 @@ button.icon-button {
   flex-direction: column;
   align-items: center;
 
-  gap: 5px;
+  gap: 16px;
+  text-align: center;
 }
 
 .mobile-nav-dialog .mobile-page-link {
@@ -280,6 +328,12 @@ button.icon-button {
 
 .site-footer a {
   color: var(--color-text);
+}
+
+.site-footer .site-footer-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .footer-links-wrapper {

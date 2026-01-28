@@ -4,14 +4,17 @@
   <div class="content-wrapper">
     {%- assign footer_pages = site.data.navigation.footer_pages -%}
 
-    <ul class="footer-links-wrapper unstyled-list">
+    <div class="site-footer-contents">
+      <ul class="footer-links-wrapper unstyled-list">
 
-      {%- include footer_links_col.html footer_pages=footer_pages.col1 -%}
-      {%- include footer_links_col.html footer_pages=footer_pages.col2 -%}
-      {%- include footer_links_col.html footer_pages=footer_pages.col3 -%}
+        {%- include footer_links_col.html footer_pages=footer_pages.col1 -%}
+        {%- include footer_links_col.html footer_pages=footer_pages.col2 -%}
+        {%- include footer_links_col.html footer_pages=footer_pages.col3 -%}
 
-    </ul>
+      </ul>
 
+      <small><strong>PMRP</strong> is part of a 501(c)(3) non-profit organization.</small>
+    </div>
   </div>
 
 </footer>

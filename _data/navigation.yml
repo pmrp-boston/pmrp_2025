@@ -3,32 +3,26 @@ tickets_page: tickets.md
 auditions_page: auditions.md
 
 header_pages:
-  - upcoming.md
-  - calendar.md
-  - projects/index.md
-  - about/index.md
+  - page: upcoming.md
+    subpages:
+    - calendar.md
+  - label: Our Work
+    subpages:
+    - past.md
+    - projects/index.md
+    - multimedia.md
+  - page: join.md
 
 footer_pages:
   col1:
-  - page: tickets.md
-  - page: auditions.md
-  - page: calendar.md
-  - page: past.md
-  col2:
-  - page: projects/index.md
-    subpages:
-    - projects/duke.md
-  col3:
-  - page: multimedia.md
-    subpages:
-    - audio.md
-    - video.md
-    - photos.md
   - page: about/index.md
     subpages:
     - people.md
     - about/site.md
-
+  col2:
+  - page: shop.md
+    subpages: 
+    - donate.md
 
 social_media:
   - platform: youtube
