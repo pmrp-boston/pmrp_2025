@@ -32,13 +32,13 @@ Publicity Director
 ## Volunteer Staff
 
 Webmasters
-: Kimberly Dauber and Sid Hackney
+: Jay Sekora, Kimberly Dauber and Sid Hackney
 
 ## Patrons of The Library
 Susan Alyn
 
 ## Officers' Duties
-This list is a summary. For a fuller explanation of officer roles, see [this PDF document]({{ "assets/documents/PMRP_officer_roles.pdf" | relative_url }}).
+This list is a summary. For a fuller explanation of officer roles, see [this PDF document]({{ "sites/default/files/PMRP_officer_roles.pdf" | relative_url }}).
 
 Artistic Director
 : Oversees artistic decisions of PMRP.
@@ -59,4 +59,4 @@ Technical Director
 : Oversees our audio, Foley, and other equipment (and props, makeup, and costumes as needed). Oversees our digital and sound-effects library.
 
 **Attachment:**
-[PMRP officer roles, responsibilities, and duties]({{ "assets/documents/PMRP_officer_roles.pdf" | relative_url }})
+[PMRP officer roles, responsibilities, and duties]({{ "sites/default/files/PMRP_officer_roles.pdf" | relative_url }})
