@@ -4,8 +4,7 @@
 
 {% assign sorted_pages = site.pages | sort: "path" %}
 
-<div class="responsive-table-scroll-wrapper">
-<div class="responsive-table-wrapper">
+{% capture pages_table %}
 <table>
 <thead>
 <th>Title</th>
@@ -22,15 +21,15 @@
 {% endfor %}
 </tbody>
 </table>
-</div>
-</div>
+{% endcapture %}
+
+{% include responsive_xscroll.html content=pages_table %}
 
 <h3>Seasons</h3>
 
 {% assign sorted_seasons = site.seasons | sort: "season_id" %}
 
-<div class="responsive-table-scroll-wrapper">
-<div class="responsive-table-wrapper">
+{% capture seasons %}
 <table>
 <thead>
 <th>Title</th>
@@ -47,15 +46,15 @@
 {% endfor %}
 </tbody>
 </table>
-</div>
-</div>
+{% endcapture %}
+
+{% include responsive_xscroll.html content=seasons %}
 
 <h3>Events</h3>
 
 {% assign sorted_events = site.events | sort: "season_id" | reverse %}
 
-<div class="responsive-table-scroll-wrapper">
-<div class="responsive-table-wrapper">
+{% capture events %}
 <table>
 <thead>
 <th>Title</th>
@@ -74,14 +73,14 @@
 {% endfor %}
 </tbody>
 </table>
-</div>
-</div>
+{% endcapture %}
+
+{% include responsive_xscroll.html content=events %}
 
 <h3>Venues</h3>
 {% assign sorted_venues = site.venues | sort: "path" %}
 
-<div class="responsive-table-scroll-wrapper">
-<div class="responsive-table-wrapper">
+{% capture venues %}
 <table>
 <thead>
 <th>Title</th>
@@ -98,14 +97,14 @@
 {% endfor %}
 </tbody>
 </table>
-</div>
-</div>
+{% endcapture %}
+
+{% include responsive_xscroll.html content=venues %}
 
 <h3>Posts</h3>
 {% assign sorted_posts = site.posts | sort: "path" %}
 
-<div class="responsive-table-scroll-wrapper">
-<div class="responsive-table-wrapper">
+{% capture posts %}
 <table>
 <thead>
 <th>Title</th>
@@ -122,6 +121,6 @@
 {% endfor %}
 </tbody>
 </table>
-</div>
-</div>
+{% endcapture %}
 
+{% include responsive_xscroll.html content=posts %}
