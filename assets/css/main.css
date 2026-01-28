@@ -285,7 +285,7 @@ button.menu-button-dropdown {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 850px) {
   .mobile-nav-dialog {
     display: none;
   }
