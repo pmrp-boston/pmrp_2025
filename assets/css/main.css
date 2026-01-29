@@ -339,6 +339,7 @@ button.menu-button-dropdown {
   align-items: center;
   gap: 16px;
   font-weight: bold;
+  text-align: center;
 }
 
 .mobile-nav-dialog .links-wrapper:has(.links-submenu) .page-link {

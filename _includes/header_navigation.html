@@ -33,6 +33,25 @@
             </svg>
             </button>
             <ul class="links-submenu unstyled-list" id="submenu-{{ item_id }}">
+
+            {% if item.page == "upcoming.md" %}
+            {% for event in site.events %}
+            {% if site.time < event.closed_datetime %}
+            <li>
+                <a class="page-link" href="{{ event.url | relative_url }}">{{ event.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+
+            {% for season in site.seasons %}
+            {% if site.time < season.closed_datetime %}
+            <li>
+                <a class="page-link" href="{{ season.url | relative_url }}">{{ season.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+
             {% for subpage in item.subpages %}
             {% assign my_subpage = site.pages | where: "path", subpage | first %}
             <li>
