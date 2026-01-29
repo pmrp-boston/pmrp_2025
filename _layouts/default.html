@@ -33,7 +33,9 @@
   <dialog class="mobile-nav-dialog" id="mobileNavDialog">
     <div class="mobile-nav-dialog-contents">
       <div class="mobile-nav-dialog-header">
-        <img class="mobile-nav-dialog-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
+        <a href="{{ '/' | relative_url }}">
+          <img class="mobile-nav-dialog-title-img" src="{{ site.title_img | relative_url }}" alt="{{ site.title | escape }}"/>
+        </a>
         <button class="mobile-nav-dialog-close-button icon-button" id="closeMobileNavDialogButton">
           <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
             <title>Close navigation</title>
