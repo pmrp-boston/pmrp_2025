@@ -1,0 +1,9 @@
+{% assign sorted_seasons = site.seasons | sort: "season_id" | reverse %}
+
+<ol class="jump-to-season unstyled-list">
+{% for season in sorted_seasons %}
+<li>
+    <a href="#{{ season.title | replace: ' ', '-' | downcase }}">{{ season.season_id }}</a>
+</li>
+{% endfor %}
+</ol>

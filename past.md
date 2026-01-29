@@ -3,7 +3,9 @@ layout: page
 title: Past Shows
 ---
 
-This section lists our past performances. See our upcoming events page for events to look forward to!
+This section lists our past performances. See our [upcoming events]({{ 'upcoming' | relative_url }}) page for events to look forward to!
+
+{% include jump_to_season.html %}
 
 {% assign sorted_seasons = site.seasons | sort: "season_id" | reverse %}
 

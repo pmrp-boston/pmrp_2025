@@ -502,3 +502,21 @@ aside.callout {
 aside.callout > :last-child {
   margin-bottom: 0;
 }
+
+.jump-to-season {
+  display: flex;
+  margin-bottom: calc(1.5 * var(--space-vertical-rhythm));
+  gap: 8px;
+}
+
+.jump-to-season a {
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: var(--color-bg-primary);
+  color: var(--color-text);
+}
+
+.jump-to-season a:hover {
+  text-decoration: none;
+}
