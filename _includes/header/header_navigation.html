@@ -1,8 +1,8 @@
 {%- assign page_paths = site.data.navigation.header_pages -%}
 {%- if page_paths -%}
 <nav class="site-nav">
-    {% include social.html %}
-    {% include nav_external_links.html %}
+    {% include header/social.html %}
+    {% include header/nav_external_links.html %}
     <ul class="links-wrapper unstyled-list">
         {% for item in page_paths %}
         {% if item.page %}
