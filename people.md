@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PMRP People
+title: Our People
 ---
 
 ## Officers

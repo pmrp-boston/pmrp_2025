@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PMRP Store
+title: Shop
 ---
 Check out the Post-Meridian Radio Players online stores at Bandcamp and
 Zazzle, where you can buy your own copies of past performances and studio

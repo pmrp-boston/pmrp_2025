@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Donate to PMRP
+title: Donate
 ---
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
