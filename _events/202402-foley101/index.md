@@ -1,6 +1,6 @@
 ---
 title: 'Community-wide Foley 101!'
-# season_id: 0000
+season_id: 2024
 event_id: 202402-foley101
 # date: '2026-03-15T13:27:29-04:00'
 # draft: false

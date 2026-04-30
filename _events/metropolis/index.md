@@ -1,6 +1,6 @@
 ---
 title: 'Metropolis'
-# season_id: 0000
+season_id: 2023
 event_id: metropolis
 # date: '2026-03-15T13:27:39-04:00'
 # draft: false
