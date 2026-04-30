@@ -4,7 +4,7 @@ season_id: 2024
 event_id: 13thmystery
 # date: '2026-03-15T13:27:30-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2024-07-28 14:00:00 -0400
 # performances:
 # [...]
 # tickets:

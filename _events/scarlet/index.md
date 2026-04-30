@@ -4,7 +4,7 @@ season_id: 2023
 event_id: scarlet
 # date: '2026-03-15T13:27:38-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2023-07-29 20:00:00 -0400
 # performances:
 # [...]
 # tickets:

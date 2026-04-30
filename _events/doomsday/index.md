@@ -4,7 +4,7 @@ season_id: 2024
 event_id: doomsday
 # date: '2026-03-15T13:27:29-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2024-06-08 20:00:00 -0400
 # performances:
 # [...]
 # tickets:

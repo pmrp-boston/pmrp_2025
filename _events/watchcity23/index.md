@@ -4,7 +4,7 @@ season_id: 2023
 event_id: watchcity23
 # date: '2026-03-15T13:27:24-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2023-05-13 12:00:00 -0400
 # performances:
 # [...]
 # tickets:

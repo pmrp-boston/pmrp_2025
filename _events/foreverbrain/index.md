@@ -4,7 +4,7 @@ season_id: 2023
 event_id: foreverbrain
 # date: '2026-03-15T13:27:28-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2023-06-10 19:30:00 -0400
 # performances:
 # [...]
 # tickets:

@@ -4,7 +4,7 @@ season_id: 2024
 event_id: wbtc
 # date: '2026-03-15T13:27:37-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2024-04-28 13:30:00 -0400
 # performances:
 # [...]
 # tickets:

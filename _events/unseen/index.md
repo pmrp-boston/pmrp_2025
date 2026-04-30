@@ -4,7 +4,7 @@ season_id: 2024
 event_id: unseen
 # date: '2026-03-15T13:27:33-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2024-11-03 14:00:00 -0400
 # performances:
 # [...]
 # tickets:

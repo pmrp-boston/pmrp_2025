@@ -4,7 +4,7 @@ season_id: 2024
 event_id: 202402-foley101
 # date: '2026-03-15T13:27:29-04:00'
 # draft: false
-# closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
+closed_datetime: 2024-02-24 13:00:00 -0400
 # performances:
 # [...]
 # tickets:
