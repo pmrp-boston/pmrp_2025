@@ -13,6 +13,8 @@ event_id: metropolis
 ---
 ![](/sites/default/files/Metropolis-webbanner-600px.png)
 
+<div data-align="center">
+
 <!-- <span class='headphrase'><a href='/events/metropolis/auditions'>Auditions</a>:</span> Monday, February 6th, and Tuesday, February 7th, 2023<br/>(with callbacks, if needed, on Thursday, February 9th)<br/>--><span class="headphrase">[Extended
 online program](/events/metropolis/metropolis-program)</span>  
 An extended online program with director’s and producer’s notes and cast
@@ -135,3 +137,4 @@ Google Maps link](https://goo.gl/maps/5vQFdqTPx7bcFJrT7).
 | House Manager      | Jamie Lin        |
 | House Manager      | Jacob Sommer     |
 
+</div>
