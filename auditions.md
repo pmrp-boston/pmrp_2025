@@ -41,11 +41,11 @@ Auditions will be held at [{{ venue.title }}]({{ venue.url | relative_url }})
 
 {{ event.auditions.info }}
 
-{% if event.auditions.signup_form_link and event.auditions.docs_link %}
+{% if event.auditions.signup_form_link or event.auditions.docs_link %}
 ### Resources
 
-- [Audition Sign Up Form]({{ event.auditions.signup_form_link }})
-- [Audition Materials]({{ event.auditions.docs_link }})
+{% if event.auditions.signup_form_link %}- [Audition Sign Up Form]({{ event.auditions.signup_form_link }}){% endif %}
+{% if event.auditions.docs_link %}- [Audition Materials]({{ event.auditions.docs_link }}){% endif %}
 {% endif %}
 
 {% else %}
