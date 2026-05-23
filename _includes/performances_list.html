@@ -20,7 +20,7 @@
 {% endcapture %}
 
 <li>
-    {{ date_description }} at {{ venue_link }}{{ matinee }}
+    {{ date_description }} {% if performance.venue_id %}at {{ venue_link }}{% endif %}{{ matinee }}
 </li>
 
 {% endfor %}
