@@ -90,7 +90,7 @@ button.icon-button {
   padding-right: calc(var(--space-outer-gutter) * 2);
   padding-left: calc(var(--space-outer-gutter) * 2);
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .content-wrapper {
     max-width: -webkit-calc(800px - var(--space-outer-gutter) * 2);
     max-width: calc(800px - var(--space-outer-gutter) * 2);
@@ -177,7 +177,7 @@ button.icon-button {
   background-color: color-mix(in oklab, var(--color-text), white 25%);
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .site-header-hero-link {
     font-size: 0.9rem;
   }
@@ -199,7 +199,7 @@ button.icon-button {
   height: 5rem;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .site-title .site-title-img {
     height: 3.5rem;
   }
@@ -211,7 +211,7 @@ button.icon-button {
   align-items: flex-end;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   header .site-nav {
     display: none;
   }
@@ -311,7 +311,7 @@ button.menu-button-dropdown:hover {
   display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .mobile-nav {
     display: contents;
   }
@@ -321,7 +321,7 @@ button.menu-button-dropdown:hover {
   }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 950px) {
   .mobile-nav-dialog {
     display: none;
   }
@@ -461,7 +461,7 @@ button.menu-button-dropdown:hover {
   width: 30%;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .footer-links-col {
     width: 100%;
   }
@@ -527,7 +527,7 @@ button.menu-button-dropdown:hover {
   letter-spacing: -1px;
   line-height: 1;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .post-title {
     font-size: 36px;
   }
@@ -539,7 +539,7 @@ button.menu-button-dropdown:hover {
 .post-content h2 {
   font-size: 32px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .post-content h2 {
     font-size: 28px;
   }
@@ -547,7 +547,7 @@ button.menu-button-dropdown:hover {
 .post-content h3 {
   font-size: 26px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .post-content h3 {
     font-size: 22px;
   }
@@ -555,7 +555,7 @@ button.menu-button-dropdown:hover {
 .post-content h4 {
   font-size: 20px;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 950px) {
   .post-content h4 {
     font-size: 18px;
   }
