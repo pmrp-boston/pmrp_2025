@@ -13,6 +13,9 @@ openButton.addEventListener("click", () => {
 // "Close" button closes the dialog
 closeButton.addEventListener("click", () => {
   dialog.close();
+});
+
+dialog.addEventListener("close", () => {
   html.style.overflow = "unset";
 });
 
@@ -20,6 +23,5 @@ closeButton.addEventListener("click", () => {
 addEventListener("resize", () => {
   if (window.innerWidth >= 850 && dialog.open) {
     dialog.close();
-    html.style.overflow = "unset";
   }
 });
