@@ -150,3 +150,45 @@ If you use Visual Studio Code, you may find these useful to add to tasks.json fo
     ]
 }
 ```
+
+# Updating the site
+
+Configure the links in the main menu, footer, and social media menu from _data/navigation.yml.
+
+To add or update an event, see _events/README.md.
+
+To add or update a season, see _seasons/README.md.
+
+To add or update a venue, see _venues/README.md.
+
+Edit other pages by editing their corresponding Markdown or HTML file.
+
+The home page as well as Tickets, Auditions, Upcoming, and Past Shows pages are created based on the front matter from events and seasons.
+
+## Front matter date and datetime formats
+
+All front matter dates (e.g. closed_datetime) are formatted this way:
+
+Format: `YYYY-MM-DD`
+
+Example: `2026-04-25` (April 25, 2026)
+
+All front matter datetimes are formatted this way:
+
+Format: `YYYY-MM-DD hh:mm:ss -TZTZ`
+
+Example: `2026-04-25 20:00:00 -0400` (April 25, 2026, 8:00 PM EDT)
+
+- `Y` = year
+- `M` = month
+- `D` = day
+- `h` = hour (24-hour clock)
+- `m` = minute
+- `s` = second
+- `-TZTZ` = Timezone
+
+After the second Sunday in March, use -0400 (Eastern Daylight Time) for the timezone.
+
+After the first Sunday in November, use -0500 (Eastern Standard Time) for the timezone.
+
+Don't sweat it too much if you get the time zone wrong. It'll only be off by an hour.
