@@ -3,7 +3,7 @@
 <nav class="site-nav">
     {% include header/social.html %}
     {% include header/nav_external_links.html %}
-    <ul class="links-wrapper unstyled-list">
+    <ul class="page-links unstyled-list">
         {% for item in page_paths %}
         {% if item.page %}
         {% assign my_page = site.pages | where: "path", item.page | first %}
@@ -13,9 +13,9 @@
         {% endif %}
         {% assign item_id = item_id_src | replace: " ", "-" %}
 
-        <li class="links-item">
+        <li>
             {% if item.page %}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {% endif %}
             {% if item.label and item.page == nil %}
             <span>{{ item.label }}</span>
@@ -32,13 +32,13 @@
                 <use xlink:href="{{ '/assets/ui-icons.svg#caret' | relative_url }}"></use>
             </svg>
             </button>
-            <ul class="links-submenu unstyled-list" id="submenu-{{ item_id }}">
+            <ul class="page-links-submenu unstyled-list" id="submenu-{{ item_id }}">
 
             {% if item.page == "upcoming.md" %}
             {% for event in site.events %}
             {% if site.time < event.closed_datetime %}
             <li>
-                <a class="page-link" href="{{ event.url | relative_url }}">{{ event.title }}</a>
+                <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
             </li>
             {% endif %}
             {% endfor %}
@@ -46,7 +46,7 @@
             {% for season in site.seasons %}
             {% if site.time < season.closed_datetime %}
             <li>
-                <a class="page-link" href="{{ season.url | relative_url }}">{{ season.title }}</a>
+                <a href="{{ season.url | relative_url }}">{{ season.title }}</a>
             </li>
             {% endif %}
             {% endfor %}
@@ -55,7 +55,7 @@
             {% for subpage in item.subpages %}
             {% assign my_subpage = site.pages | where: "path", subpage | first %}
             <li>
-                <a class="page-link" href="{{ my_subpage.url | relative_url }}">{{ my_subpage.title }}</a>
+                <a href="{{ my_subpage.url | relative_url }}">{{ my_subpage.title }}</a>
             </li>
             {% endfor %}
             </ul>
