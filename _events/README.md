@@ -109,8 +109,7 @@ Other front matter fields are optional.
 | performances.dates[].date_info | Text | Text description of the performance date. Use when approximate performance dates are known, but not specific datetimes. Ignored if datetime is present. |
 | performances.dates[].datetime | Datetime | Date and time of performance. |
 | performances.dates[].venue_id | Text | Venue where performance is happening. Should match a venue_id from the venues collection. |
-| performances.info | Markdown | Additional information about auditions. Appears on event page and auditions page. Usually "Callbacks, if needed, will be individually scheduled over Zoom." |
-| performances.special_instructions | Markdown | Notes about performances **specific to this event**. Highlight anything that makes this event's performances different from other events', e.g. a new location, a pay what you can night, etc. If present, a special "About {title of event} Performances" section will appear. |
+| performances.info | Markdown | Additional information about performances. Appears on event page and tickets page. |
 
 ### Locations front matter
 
