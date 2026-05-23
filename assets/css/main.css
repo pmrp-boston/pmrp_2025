@@ -112,7 +112,7 @@ button.icon-button {
  * Site header
  */
 .site-header {
-  background-color: #ececec;
+  background-color: var(--color-bg-secondary);
   padding: 10px;
 }
 
