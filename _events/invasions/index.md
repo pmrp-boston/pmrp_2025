@@ -1,5 +1,6 @@
 ---
 title: War of the Worlds and Other Invasions
+excerpt: For Halloween 2025, the Post Meridian Radio Players are proud to present <span class='headphrase'>“The War of the Worlds and Other Invasions”</span>, three radio-drama adaptations of classic H. G. Wells stories!
 event_id: invasions
 season_id: 2025
 closed_datetime: 2025-11-01 19:30:00 -0400
@@ -24,20 +25,19 @@ locations:
   - venue_id: mca
     info: The second weekend’s performances
 tickets:
-  - weekend_title: "Weekend of July 26"
-    weekend: "the first weekend"
-    location: Somerville
-    vendor_url: https://www.brownpapertickets.com/event/6669517
-    vendor_name: Brown Paper Tickets
-    vendor_img: bpt
-    closed_datetime: 2025-10-25 20:00:00 -0400
-  - weekend_title: "Weekend of August 1"
-    weekend: "the second weekend"
-    location: the Mosesian Center for the Arts
-    vendor_url: https://forms.gle/yEPSuYnkqeHJUNdj7
-    vendor_name: the MCA website
-    vendor_img: mca
-    closed_datetime: 2025-11-01 19:30:00 -0400
+  box_offices:
+    - title: "Weekend of July 26"
+      date_info: "The first weekend"
+      venue_id: 204elm
+      vendor_url: https://www.brownpapertickets.com/event/6669517
+      vendor_id: bpt
+      closed_datetime: 2025-10-25 20:00:00 -0400
+    - title: "Weekend of August 1"
+      date_info: "The second weekend"
+      venue_id: mca
+      vendor_url: https://ci.ovationtix.com/34875/production/1254080
+      vendor_id: mca
+      closed_datetime: 2025-11-01 19:30:00 -0400
 ---
 
 ## Program and bios

@@ -11,7 +11,7 @@ layout: home
 
 {% if num_upcoming_events >= 2 %}
 
-# Now Playing: 
+# Now Playing:
 
 {% for event in site.events %}
 {% if site.time < event.closed_datetime %}
@@ -24,14 +24,9 @@ layout: home
 [Auditions are now open!]({{ 'auditions' | relative_url }})
 {% endif %}
 
-{% assign has_tickets = false %}
-{% for ticket_details in event.tickets %}
-{% if site.time < ticket_details.closed_datetime %}
-{% assign has_tickets = true %}
-{% endif %}
-{% endfor %}
+{% capture has_tickets %}{% include fn/event_has_tickets.html event=event %}{% endcapture %}
 
-{% if has_tickets %}
+{% if has_tickets.size > 0 %}
 [Tickets are available now!]({{ 'tickets' | relative_url }})
 {% endif %}
 
@@ -54,14 +49,9 @@ layout: home
 [Auditions are now open!]({{ 'auditions' | relative_url }})
 {% endif %}
 
-{% assign has_tickets = false %}
-{% for ticket_details in current_event.tickets %}
-{% if site.time < ticket_details.closed_datetime %}
-{% assign has_tickets = true %}
-{% endif %}
-{% endfor %}
+{% capture has_tickets %}{% include fn/event_has_tickets.html event=current_event %}{% endcapture %}
 
-{% if has_tickets %}
+{% if has_tickets.size > 0 %}
 [Tickets are available now!]({{ 'tickets' | relative_url }})
 {% endif %}
 

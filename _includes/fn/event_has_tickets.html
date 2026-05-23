@@ -1,0 +1,12 @@
+{%- assign has_tickets = false -%}
+{%- for box_office in include.event.tickets.box_offices -%}
+{%- if site.time < box_office.closed_datetime and box_office.venue_id and box_office.date_info -%}
+{%- if box_office.vendor_url or box_office.reservation_form_url -%}
+{%- assign has_tickets = true -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+
+{%- if has_tickets -%}
+1
+{%- endif -%}

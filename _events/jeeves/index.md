@@ -22,13 +22,32 @@ performances:
       venue_id: 204elm
     - date_info: The weekend of April 24th
       venue_id: mca
-  info: >
-    Exact details to come; check back here, follow us on the socials, or sign up for [our mailing list](https://l.pmrp.org/mailman3/lists/pmrp-announce.l.pmrp.org/) for ticketing information when dates are finalized.
 locations:
   - venue_id: 204elm
     info: Auditions, rehearsals, and the first weekend’s performances
   - venue_id: mca
     info: The second weekend’s performances
+tickets:
+  info: |
+    Purchase tickets for the first weekend through Simpletix and for the second weekend through the Mosesian Center.
+  box_offices:
+    - closed_datetime: 2026-04-18 23:00:00 -0400
+      vendor_url: https://www.simpletix.com/e/jeeves-wooster-hijinks-and-shenanigans-tickets-265078
+      reservation_form_url: https://forms.gle/t2MNP2dXsooVwJVD8
+      date_info: April 16-18
+      venue_id: 204elm
+      title: Weekend of April 16th
+      info: Tickets for Thursday, April 16, are pay what you can.
+      vendor_id: stx
+      vendor_embed: extra/jeeves-simpletix-embed.html
+      # reservation_form_embed: extra/jeeves-reservations-embed.html
+    - closed_datetime: 2026-04-28 23:00:00 -0400
+      vendor_url: https://www.simpletix.com/e/jeeves-wooster-hijinks-and-shenanigans-tickets-265078
+      date_info: April 26-28
+      venue_id: mca
+      title: Weekend of April 26th
+      info: Buy tickets for **the second weekend** in **Watertown** from [the Mosesian Center for the Arts](https://www.simpletix.com/e/jeeves-wooster-hijinks-and-shenanigans-tickets-265078).
+      vendor_id: mca
 ---
 
 Our [Spring 2026]({{ 'seasons/2026' | relative_url }}) show will present original radio-drama adaptations of three P. G. Wodehouse stories featuring his iconic characters Bertie Wooster, a wealthy and idle English gentleman, and his valet (and frequent saviour) Jeeves.

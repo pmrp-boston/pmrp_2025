@@ -1,0 +1,10 @@
+- vendor_id: bpt
+  name: Brown Paper Tickets
+  img_src: assets/img/BPT_buy_tickets_large.png
+  img_alt: Tickets available now from Brown Paper Tickets
+- vendor_id: mca
+  name: The Mosesian Center for the Arts
+  img_src: assets/img/mosesian-center-for-the-arts-buy-tickets.png
+  img_alt: Tickets available now from the Dorothy and Charles Mosesian Center for the Arts
+- vendor_id: stx
+  name: SimpleTix

@@ -18,14 +18,8 @@ Current season: [{{ current_season.title }}]({{ current_season.url | relative_ur
 [Auditions]({{ 'auditions' | relative_url }}) are open! Sign up today.
 {% endif %}
 
-{% assign has_tickets = false %}
-{% for ticket_details in event.tickets %}
-{% if site.time < ticket_details.closed_datetime %}
-{% assign has_tickets = true %}
-{% endif %}
-{% endfor %}
-
-{% if has_tickets %}
+{% capture has_tickets %}{% include fn/event_has_tickets.html event=event %}{% endcapture %}
+{% if has_tickets.size > 0 %}
 [Tickets]({{ 'tickets' | relative_url }}) are available! Get yours today.
 {% endif %}
 

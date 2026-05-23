@@ -4,55 +4,82 @@ title: Tickets
 ---
 
 {% assign has_upcoming_events = false %}
-
 {% for event in site.events %}
-{% assign event_has_tickets = false %}
 {% if site.time < event.closed_datetime %}
 {% assign has_upcoming_events = true %}
+{% endif %}
+{% endfor %}
+
+{% if has_upcoming_events %}
+
+{% assign sorted_events = site.events | sort: "closed_datetime" %}
+{% for event in sorted_events %}
+{% if site.time < event.closed_datetime %}
+
+{% capture event_has_tickets %}{% include fn/event_has_tickets.html event=event %}{% endcapture %}
 
 ## [{{ event.title }}]({{ event.url | relative_url }})
+
+{{ event.tickets.info }}
 
 ### Performances
 {% include performances_list.html performances=event.performances %}
 
-{% for ticket_details in event.tickets %}
+{% if event_has_tickets.size > 0 %}
+{% for box_office in event.tickets.box_offices %}
 
-{% if site.time < ticket_details.closed_datetime and ticket_details.vendor_url %}
-{% assign event_has_tickets = true %}
+{% assign vendor = site.data.box_office_vendors | where: "vendor_id", box_office.vendor_id | first %}
+{% assign venue = site.venues | where: "venue_id", box_office.venue_id | first %}
 
-### {{ ticket_details.weekend_title }}
+### {{ box_office.title }}
 
-You can buy tickets for **{{ ticket_details.weekend }}** in **{{ ticket_details.location }}** online through [{{ ticket_details.vendor_name }}]({{ ticket_details.vendor_url | relative_url }}).
-
-{% if ticket_details.vendor_img == "bpt" %}
-<a href="{{ ticket_details.vendor_url }}">
-    <img src="{{ 'assets/img/BPT_buy_tickets_large.png' | relative_url }}" alt="Tickets available now from Brown Paper Tickets" />
-</a>
+- Dates: {{ box_office.date_info }}
+- Location: [{{ venue.short_name }}]({{ venue.url | relative_url }})
+{% if box_office.vendor_url %}
+- [Buy Tickets]({{ box_office.vendor_url }})
+{% endif %}
+{% if box_office.reservation_form_url %}
+- [Reserve Seats]({{ box_office.reservation_form_url }}) and pay at the door
 {% endif %}
 
-{% if ticket_details.vendor_img == "mca" %}
+{{ box_office.info }}
+
+{% if vendor.img_src %}
 <p>
-<a href="{{ ticket_details.vendor_url }}">
-    <img src="{{ 'assets/img/mosesian-center-for-the-arts-buy-tickets.png' | relative_url }}"
-        alt="Tickets available now from the Dorothy and Charles Mosesian Center for the Arts" />
+<a href="{{ box_office.vendor_url }}">
+    <img src="{{ vendor.img_src | relative_url }}"
+        alt="{{ vendor.img_alt }}" />
 </a>
 </p>
 {% endif %}
 
-{% if ticket_details.info %}
-{{ ticket_details.info | markdownify }}
+{% if box_office.vendor_embed %}
+{% include {{ box_office.vendor_embed }} %}
 {% endif %}
 
+{% if box_office.reservation_form_url %}
+You may also reserve seats for these performances through [this reservation form]({{ box_office.reservation_form_url }}) and pay for tickets at the door:
+
+<big><a href="{{ box_office.reservation_form_url }}">Reserve Seats</a></big>
+
 {% endif %}
+
+{% if box_office.reservation_form_embed %}
+{% capture reservation_form_embed %}
+{% include {{ box_office.reservation_form_embed }} %}
+{% endcapture %}
+{% include responsive_xscroll.html content=reservation_form_embed %}
+{% endif %}
+
 {% endfor %}
 
-{% if event_has_tickets == false %}
+{% else %}
 **There are no tickets currently available for this event.**
 {% endif %}
 
 {% endif %}
 {% endfor %}
 
-{% if has_upcoming_events == false %}
+{% else %}
 We don't have any upcoming ticketed events right now. Check back later!
 {% endif %}

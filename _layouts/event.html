@@ -21,17 +21,11 @@ layout: page
 
 {% endif %}
 
-{% assign tickets_available = false %}
-{% for ticket_details in page.tickets %}
-{% if site.time < ticket_details.closed_datetime %}
-{% assign tickets_available = true %}
-{% endif %}
-{% endfor %}
-
-{% if tickets_available %}
-
-<a href="{{ '/tickets' | relative_url }}">Tickets are available now!</a>
-
+{% capture has_tickets %}{% include fn/event_has_tickets.html event=page %}{% endcapture %}
+{% if has_tickets.size > 0 %}
+<p>
+  <a href="{{ '/tickets' | relative_url }}">Tickets are available now!</a>
+</p>
 {% endif %}
 
 {% if page.performances %}

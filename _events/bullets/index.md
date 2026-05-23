@@ -17,24 +17,24 @@ performances:
     - datetime: 2025-08-02 20:00:00 -0400
       venue_id: mca
 tickets:
-  - weekend_title: "Weekend of July 26"
-    weekend: "the first weekend"
-    location: Somerville
-    vendor_url: https://www.brownpapertickets.com/event/6669517
-    vendor_name: Brown Paper Tickets
-    vendor_img: bpt
-    closed_datetime: 2025-07-26 20:00:00 -0400
-    info: |
-      **$20 / $15 Students & Seniors 62+** (not including BPT’s fees)
+  box_offices:
+    - title: "Weekend of July 26"
+      date_info: July 26-28
+      venue_id: 204elm
+      vendor_url: https://www.brownpapertickets.com/event/6669517
+      vendor_name: Brown Paper Tickets
+      vendor_id: bpt
+      closed_datetime: 2025-07-26 20:00:00 -0400
+      info: |
+        **$20 / $15 Students & Seniors 62+** (not including BPT’s fees)
 
-      You can reserve tickets for the **Somerville** performances using [this reservation form](https://forms.gle/yEPSuYnkqeHJUNdj7) and pay for them at the door: **[Ticket Reservation Form](https://forms.gle/yEPSuYnkqeHJUNdj7)**
-  - weekend_title: "Weekend of August 1"
-    weekend: "the second weekend"
-    location: the Mosesian Center for the Arts
-    vendor_url: https://forms.gle/yEPSuYnkqeHJUNdj7
-    vendor_name: the MCA website
-    vendor_img: mca
-    closed_datetime: 2025-08-02 20:00:00 -0400
+        You can reserve tickets for the **Somerville** performances using [this reservation form](https://forms.gle/yEPSuYnkqeHJUNdj7) and pay for them at the door: **[Ticket Reservation Form](https://forms.gle/yEPSuYnkqeHJUNdj7)**
+    - title: "Weekend of August 1"
+      date_info: August 1-3
+      venue_id: mca
+      vendor_url: https://forms.gle/yEPSuYnkqeHJUNdj7
+      vendor_id: mca
+      closed_datetime: 2025-08-02 20:00:00 -0400
 # date: '2026-03-15T13:27:30-04:00'
 # draft: false
 # closed_datetime: YYYY-MM-DD HH:MM:SS -TZTZ
