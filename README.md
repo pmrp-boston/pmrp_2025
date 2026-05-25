@@ -165,6 +165,15 @@ Edit other pages by editing their corresponding Markdown or HTML file.
 
 The home page as well as Tickets, Auditions, Upcoming, and Past Shows pages are created based on the front matter from events and seasons.
 
+## Front matter banner images
+
+Any page can have banner_img and banner_im g_alt in its front matter.
+
+| Field | Type | Description |
+| ----- | ---- | ----------- |
+| banner_img | Path | URL path to banner image **from site root**, e.g. events/jeeves/jeeves-banner.png or sites/default/files/bullets-banner.jpg. |
+| banner_alt | Text | Alt text for banner image. Include this if there is info in the image that isn't present elsewhere on the page; otherwise, don't include it. See https://www.w3.org/WAI/tutorials/images/decision-tree/ for guidance. |
+
 ## Front matter date and datetime formats
 
 All front matter dates (e.g. closed_datetime) are formatted this way:

@@ -17,6 +17,13 @@
     {%- include header/header.html -%}
 
     <div class="page-wrapper">
+
+      {% if page.banner_img %}
+      <div class="banner-img-wrapper">
+        <img src="{{ page.banner_img | relative_url }}" alt="{{ page.banner_img_alt }}"/>
+      </div>
+      {% endif %}
+
       <main class="page-content" aria-label="Content">
         <div class="content-wrapper">
           {{ content }}

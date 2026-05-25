@@ -496,6 +496,18 @@ button.menu-button-dropdown:hover {
 /**
  * Page content
  */
+.page-nav {
+  margin-bottom: var(--space-vertical-rhythm);
+}
+
+.banner-img-wrapper {
+  width: 100%;
+}
+
+.banner-img-wrapper > img {
+  width: 100%;
+}
+
 .page-content {
   padding: calc(2 * var(--space-vertical-rhythm)) 0;
   flex: 1;

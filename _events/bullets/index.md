@@ -3,6 +3,7 @@ title: 'Bullets Over Boston'
 season_id: 2025
 event_id: bullets
 closed_datetime: 2025-08-02 20:00:00 -0400
+banner_img: sites/default/files/summer2025-v1-scaled-fixed.jpg
 performances:
   dates:
     - datetime: 2025-07-25 20:00:00 -0400

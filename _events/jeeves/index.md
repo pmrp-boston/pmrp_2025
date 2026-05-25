@@ -3,6 +3,7 @@ title: "Jeeves & Wooster: Hijinks and Shenanigans"
 event_id: jeeves
 season_id: 2026
 closed_datetime: 2026-04-25 20:00:00 -0400
+banner_img: events/jeeves/jeeves-webbanner-600x150.png
 auditions:
   dates:
     - 2026-04-16

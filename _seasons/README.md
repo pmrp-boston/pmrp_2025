@@ -25,4 +25,6 @@ Below, "now" refers to the time the site was regenerated.
 | title | Text | Season title. Used as the title at the top of the event's page, in the browser tab label, as the page's name in event lists, and on the auditions and tickets pages. |
 | season_id | Text | Season the event is part of. Should match a season_id from the seasons collection. Makes the event show up in lists of events for a season. |
 | closed_datetime | Datetime | Date and time the event closes. If before "now", the event will be in lists of Past events. If after "now", the event will be in lists of Upcoming events on season pages, on the Current & Upcoming page, and in the Current & Upcoming main menu. |
+| banner_img | Path | URL path to banner image from site root. See root README.md. |
+| banner_alt | Text | Alt text for banner image. See root README.md. |
 

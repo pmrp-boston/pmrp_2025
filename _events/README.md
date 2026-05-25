@@ -84,6 +84,8 @@ Other front matter fields are optional.
 | event_id | Text | Unique ID for the event. Usually matches the event folder name. |
 | season_id | Text | Season the event is part of. Should match a season_id from the seasons collection. Makes the event show up in lists of events for a season. |
 | closed_datetime | Datetime | Date and time the event closes. If before "now", the event will be in lists of Past events. If after "now", the event will be in lists of Upcoming events on season pages, on the Current & Upcoming page, and in the Current & Upcoming main menu. |
+| banner_img | Path | URL path to banner image from site root. See root README.md. |
+| banner_alt | Text | Alt text for banner image. See root README.md. |
 | auditions | Object | See [Auditions front matter](#auditions-front-matter). |
 | performances | Object | If present, performances for the event will appear on these pages: the event, Current & Upcoming, auditions, and tickets. See [Performances front matter](#performances-front-matter). |
 | locations | List of objects | If present, locations for the event will appear on the event page. See [Locations front matter](#locations-front-matter). |

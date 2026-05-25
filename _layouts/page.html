@@ -55,7 +55,7 @@ layout: default
 
   {% endif %}
 
-  <nav>
+  <nav class="page-nav">
     <ol class="unstyled-list">
       {% if site.time < page.closed_datetime %}
       <li><a href="{{ 'upcoming' | relative_url }}">Current & Upcoming</a></li>
@@ -73,6 +73,7 @@ layout: default
       {% endif %}
     </ol>
   </nav>
+
   {% endif %}
 
   <header class="post-header">
