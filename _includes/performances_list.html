@@ -3,25 +3,23 @@
 
 {% assign venue = site.venues | where: "venue_id", performance.venue_id | first %}
 
-{% capture date_description %}
-{% if performance.datetime %}
-    {{ performance.datetime | date: "%B %e, %Y, at %I:%M %p" }}
-{% else %}
-    {{ performance.date_info }}
-{% endif %}
-{% endcapture %}
+{%- capture date_description -%}
+{%- if performance.datetime -%}
+{{ performance.datetime | date: "%B %e, %Y, at %I:%M %p" }}
+{%- else -%}
+{{ performance.date_info }}
+{%- endif -%}
+{%- endcapture -%}
 
-{% capture venue_link %}
-<a href="{{ venue.url | relative_url }}">{{ venue.short_name }}</a>
-{% endcapture %}
+{%- capture venue_link -%}
+{% if venue.short_name.size > 0 %} at <a href="{{ venue.url | relative_url }}">{{ venue.short_name }}</a>{% else %}, location TBD{% endif %}
+{%- endcapture -%}
 
 {% capture matinee %}
 {% if performance.is_matinee %} (matinée){% endif %}
 {% endcapture %}
 
-<li>
-    {{ date_description }} {% if performance.venue_id %}at {{ venue_link }}{% endif %}{{ matinee }}
-</li>
+<li>{{ date_description }}{{ venue_link }}{{ matinee }}</li>
 
 {% endfor %}
 </ul>
